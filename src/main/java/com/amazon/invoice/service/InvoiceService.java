@@ -27,6 +27,7 @@ public class InvoiceService {
 		entity.setInvId("INV1234");
 		
 		entity = invoiceRespository.save(entity);
+		
 		InvoiceResponse invoiceResponse = new InvoiceResponse();
 		if (entity.getId() > 0) {
 			invoiceResponse.setCustomerName(entity.getCustomerName());
